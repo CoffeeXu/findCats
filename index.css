@@ -1,0 +1,91 @@
+@charset "utf-8";
+/* CSS Document */
+/*
+@名称: index.css
+@功能: 设置内容样式
+*/
+body {
+  font-family: Helvetica Neue, Helvetica, Tahoma, sans-serif;
+  background: #f5f5f7;
+}
+
+#title {
+  font-size: 46px;
+  text-transform: uppercase;
+}
+
+#container {
+  width: 900px;
+  margin: 44px auto 0px auto;
+  text-align: center;
+}
+
+#viewer {
+  position: relative;
+  width: 500px;
+  height: 240px;
+  border: 4px dashed #ccc;
+  border-radius: 10px;
+  vertical-align: baseline;
+  text-align: center;
+  text-shadow: 1px 1px 0 #fff;
+  /* margin:60px auto 30px auto; */
+  display: inline-block;
+}
+
+#viewer.dragover {
+  border: 5px dashed #555;
+}
+
+#droparea-text {
+  z-index: 0;
+  margin-top: 100px;
+  font-size: 20px;
+  font-weight: bold;
+  color: #555;
+}
+
+#preview {
+  z-index: 1;
+  position: absolute;
+  top: 0px;
+  left: 0px;
+}
+
+#progress {
+  font-size: 20px;
+  text-align: center;
+  color: #333;
+  position:absolute;
+  z-index:3;
+  background:skyblue;
+}
+
+footer {
+  margin-top: 10px;
+  font-size: 13px;
+  text-align: center;
+  color: grey;
+}
+
+#form1{
+	position:relative;
+	display: inline-block;
+}
+.type-file-file{
+	position:absolute;
+	left:0;top:0;
+	opacity:0;filter:alpha(opacity=0);
+	height:28px;cursor:pointer;
+}
+.type-file-button{
+	line-height:22px;
+	border:1px solid #CCCCCC;
+	padding:1px 10px;
+}
+.type-file-text{
+	border:1px solid #CCCCCC;
+	padding:4px;
+	margin-right:-7px;
+	vertical-align:bottom;
+}

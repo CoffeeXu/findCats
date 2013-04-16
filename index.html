@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<title>findCats</title>
+	<link rel="stylesheet" href="index.css" />
+</head>
+
+<body>
+  <header>
+    <div id="title">findCats</div>
+  </header>
+  <div id="container">
+    <div id="viewer">
+      <div id="droparea-text">
+        Drag an image here to find cats.
+      </div>
+      <canvas id="preview" height="0" width="0"></canvas>
+      <canvas id="step" height="440" width="440"></canvas>
+    </div>
+
+    <div id="progress"></div>
+  </div>  
+  <footer>  	
+	  <form id="form1" name="form1" method="post" action="">
+	    <input type="text" id="fileName" class="type-file-text"></input>
+		  <input type="button" class="type-file-button" value="浏览"/>
+		  <input type="file" size="20" class="type-file-file" onchange="handleFile(this.files)"></input>
+	  </form>	
+	  <button id="grey">灰度化</button>
+    <button id="hog">HOG</button>
+    <button id="binary">otsu二值化</button>
+  </footer>
+  <script type="text/javascript" src="index.js"></script>
+  <script type="text/javascript">
+
+  </script>
+</body>
+</html>
