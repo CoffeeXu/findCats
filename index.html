@@ -3,6 +3,8 @@
 <head>
 	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 	<title>findCats</title>
+  <!--script type="text/javascript" src="jquery-1.7.1.js"></script-->
+  <script type="text/javascript" src="kittydar-0.1.1.js"></script>
 	<link rel="stylesheet" href="index.css" />
 </head>
 
@@ -16,7 +18,7 @@
         Drag an image here to find cats.
       </div>
       <canvas id="preview" height="0" width="0"></canvas>
-      <canvas id="step" height="440" width="440"></canvas>
+      <!-- <canvas id="step" height="440" width="440"></canvas> -->
     </div>
 
     <div id="progress"></div>
@@ -30,10 +32,26 @@
 	  <button id="grey">灰度化</button>
     <button id="hog">HOG</button>
     <button id="binary">otsu二值化</button>
+    <button id="result">结果</button>
   </footer>
   <script type="text/javascript" src="index.js"></script>
   <script type="text/javascript">
-
+  //$(document).ready(function() {
+    function getTime(){     
+      var m = new Date().getMinutes();
+      var s = new Date().getSeconds();
+      $("progress").innerHTML += m+":"+s;
+    }
+    $("result").addEventListener('click', function() {   
+        getTime();
+        var canvas = $("preview");
+        var cats = kittydar.detectCats(canvas);
+        console.log("there are", cats.length, "cats in this photo");
+        console.log(cats[0]);
+        getTime();
+    });
+    
+  //});
   </script>
 </body>
 </html>

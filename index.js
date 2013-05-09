@@ -125,7 +125,7 @@ function greying(canvas)
     };
     //画到页面上呈现putImageData
     drawImage(canvas, greys);
-    alert(greys);
+    //alert(greys);
     return greys;    
 }
 
