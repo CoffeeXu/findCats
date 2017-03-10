@@ -12,6 +12,7 @@ body {
 #title {
   font-size: 46px;
   text-transform: uppercase;
+  text-align: center;
 }
 
 #container {
@@ -71,6 +72,7 @@ footer {
 #form1{
 	position:relative;
 	display: inline-block;
+  overflow: hidden;
 }
 .type-file-file{
 	position:absolute;

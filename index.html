@@ -3,7 +3,6 @@
 <head>
 	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 	<title>findCats</title>
-  <!--script type="text/javascript" src="jquery-1.7.1.js"></script-->
   <script type="text/javascript" src="kittydar-0.1.1.js"></script>
 	<link rel="stylesheet" href="index.css" />
 </head>
@@ -22,13 +21,13 @@
     </div>
 
     <div id="progress"></div>
-  </div>  
-  <footer>  	
+  </div>
+  <footer>
 	  <form id="form1" name="form1" method="post" action="">
 	    <input type="text" id="fileName" class="type-file-text"></input>
 		  <input type="button" class="type-file-button" value="浏览"/>
 		  <input type="file" size="20" class="type-file-file" onchange="handleFile(this.files)"></input>
-	  </form>	
+	  </form>
 	  <button id="grey">灰度化</button>
     <button id="hog">HOG</button>
     <button id="binary">otsu二值化</button>
@@ -37,20 +36,20 @@
   <script type="text/javascript" src="index.js"></script>
   <script type="text/javascript">
   //$(document).ready(function() {
-    function getTime(){     
+    function getTime() {
       var m = new Date().getMinutes();
       var s = new Date().getSeconds();
-      $("progress").innerHTML += m+":"+s;
+      // $('progress').innerHTML += m+':'+s;
     }
-    $("result").addEventListener('click', function() {   
+    $('result').addEventListener('click', function() {
         getTime();
-        var canvas = $("preview");
+        var canvas = $('preview');
         var cats = kittydar.detectCats(canvas);
-        console.log("there are", cats.length, "cats in this photo");
+        console.log('there are', cats.length, 'cats in this photo');
         console.log(cats[0]);
-        getTime();
+        // getTime();
     });
-    
+
   //});
   </script>
 </body>
